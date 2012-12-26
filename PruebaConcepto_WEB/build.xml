@@ -78,9 +78,9 @@
 		<copy todir="${work.home}/META-INF">
 			<fileset dir="${web.home}/META-INF" />
 		</copy>
-		<copy todir="${work.home}/resources">
+		<!--<copy todir="${work.home}/resources">
 			<fileset dir="${web.home}/resources" />
-		</copy>
+		</copy>-->
 		<copy todir="${work.home}/WEB-INF">
 			<fileset dir="${web.home}/WEB-INF" excludes="**/*.classes" />
 		</copy>
