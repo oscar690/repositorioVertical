@@ -31,7 +31,7 @@
 		</fileset>
 	</path>
 
-	<target name="all" depends="clean,compile,dist" description="Clean work dirs, then compile and create a WAR" />
+	<target name="all" depends="clean,compile,dist,deploywar" description="Clean work dirs, then compile and create a WAR" />
 
 	<target name="fast-deploy">
 
