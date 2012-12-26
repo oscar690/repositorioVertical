@@ -105,6 +105,11 @@
 				<include name="${app.name}.war" />
 			</fileset>
 		</copy>
+		<copy todir="${deploy.server.war.path}" preservelastmodified="true">
+			<fileset dir="${dist.home}/">
+				<include name="${app.name}.war" />
+			</fileset>
+		</copy>
 	</target>
 	
 	<target name="war" depends="compile">
