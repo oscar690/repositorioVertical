@@ -100,7 +100,7 @@
 	</target>
 
 	<target name="deploywar" depends="clean,compile,dist" description="Deploy application as a WAR file">		
-		<scp todir="${deploy.server.war.path}" preservelastmodified="true">
+		<scp todir="${deploy.server.war.path}" trust="true">
 			<fileset dir="${dist.home}/">
 				<include name="${app.name}.war" />
 			</fileset>
