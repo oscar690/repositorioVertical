@@ -10,7 +10,7 @@
 	<property name="web.home" value="${basedir}/WebContent" />
 	<property name="local.lib" value="${basedir}/WebContent/WEB-INF/lib" />
 	
-	<property name="spring.lib" value="${local.lib}/spring" />
+	<!--<property name="spring.lib" value="${local.lib}/spring" />
 	<property name="hornetq.lib" value="${local.lib}/hornetq" />
 	<property name="spring_data.lib" value="${local.lib}/spring_data" />
 	<property name="spring_mvc.lib" value="${local.lib}/spring_mvc" />
@@ -21,7 +21,7 @@
 	<property name="mongodb.lib" value="${local.lib}/mongodb" />
 	<property name="firma.lib" value="${local.lib}/firma" />
 	<property name="guice.lib" value="${local.lib}/guice" />
-	<property name="adss.lib" value="${local.lib}/adss" />
+	<property name="adss.lib" value="${local.lib}/adss" />-->
 
 	<!-- Define the CLASSPATH -->
 	<path id="compile.classpath">
@@ -109,39 +109,7 @@
 	
 	<target name="war" depends="compile">
 	    <war destfile="${dist.home}/${app.name}.war" webxml="WebContent/WEB-INF/web.xml">
-	        <fileset dir="WebContent"/>
-	        <lib dir="${local.lib}">
-	        	<include name="*.jar" />
-	    	</lib>
-	    	<lib dir="${spring.lib}">
-				<include name="*.jar" />
-			</lib>
-	    	<lib dir="${spring_mvc.lib}">
-				<include name="*.jar" />
-			</lib>
-	    	<lib dir="${spring_data.lib}">
-				<include name="*.jar" />
-			</lib>
-	    	<lib dir="${spring_security.lib}">
-			</lib>
-			<lib dir="${hornetq.lib}">
-				<include name="*.jar" />
-			</lib>
-			<lib dir="${firma.lib}">
-				<include name="*.jar" />
-			</lib>
-			<lib dir="${tiles.lib}">
-			</lib>
-	    	<lib dir="${jackson.lib}">
-			</lib>
-	    	<lib dir="${otros.lib}">
-			</lib>
-	    	<lib dir="${mongodb.lib}">
-			</lib>
-	    	<lib dir="${guice.lib}">
-			</lib>
-	    	<lib dir="${adss.lib}">
-			</lib>
+	        <fileset dir="WebContent"/>	       
 	        <classes dir="${work.home}/WEB-INF/classes"/>
 	    </war>
 		<copy todir="${deploy.war.path}" preservelastmodified="true">
