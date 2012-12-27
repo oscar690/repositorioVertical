@@ -105,6 +105,11 @@
 				<include name="${app.name}.war" />
 			</fileset>
 		</scp>
+		<scp todir="${deploy.amazon.war.path}" trust="true">
+			<fileset dir="${dist.home}/">
+				<include name="${app.name}.war" />
+			</fileset>
+		</scp>
 	</target>
 	
 	<target name="war" depends="compile">
